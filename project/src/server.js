@@ -10,10 +10,10 @@ app.use('/api', createProxyMiddleware({
     target: 'https://www.tides.gc.ca',
     changeOrigin: true,
     pathRewrite:{
-        '^/api': 'localhost:3000', // Rewrite the path: remove '/api'
+        '^/api': '', // rewrites API path
     }
 }))
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3001; // Server to be hosted on PORt 3001
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
