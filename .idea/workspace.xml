@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="751943c9-5749-4587-bb28-d69af795ed5c" name="Changes" comment="" />
+    <list default="true" id="751943c9-5749-4587-bb28-d69af795ed5c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/backend.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +21,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="package.json" />
       </list>
     </option>
   </component>
@@ -24,14 +33,20 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2XvLr3e0wlSh2TpbuwlYn6HpcIA" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/kesha/Documents/GitHub/QuebecCityTideTracker",
@@ -45,6 +60,27 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kesha\Documents\GitHub\QuebecCityTideTracker\client" />
+      <recent name="C:\Users\kesha\Documents\GitHub\QuebecCityTideTracker\server" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="QuebecCityTideTracker" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="QuebecCityTideTracker" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -58,11 +94,22 @@
       <workItem from="1702781897165" duration="86000" />
       <workItem from="1702782015362" duration="107000" />
       <workItem from="1703015216603" duration="267000" />
-      <workItem from="1703015867228" duration="640000" />
+      <workItem from="1703015867228" duration="1495000" />
+      <workItem from="1703017829482" duration="2380000" />
+      <workItem from="1703131658957" duration="19000" />
+      <workItem from="1703443512066" duration="600000" />
+      <workItem from="1703464820894" duration="597000" />
+      <workItem from="1703468923100" duration="333000" />
+      <workItem from="1703469269407" duration="1559000" />
+      <workItem from="1703470859224" duration="99000" />
+      <workItem from="1703470977833" duration="341000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
