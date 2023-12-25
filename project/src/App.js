@@ -13,8 +13,10 @@ function App() {
 
 
         try {
-            const url1 = "https://www.tides.gc.ca/en/stations/03250/2023-08-04?tz=EDT&unit=m";
-            const response = await axios.get(url1);
+            // const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+            // const targetUrl = "https://www.tides.gc.ca/en/stations/03250/2023-08-04?tz=EDT&unit=m";
+            // const response = await axios.get(proxyUrl + targetUrl);
+            const response = await axios.get('/api/en/stations/03250/2023-08-04?tz=EDT&unit=m');
             const $ = cheerio.load(response.data);
 
             const pred = $("#readings-list-predictions tbody").text().split("\n");
