@@ -4,9 +4,14 @@ const express = require('express')
 const app = express();
 const axios = require('axios')
 const cheerio = require('cheerio')
+const path = require('path')
 const port = process.env.PORT || 8000;
 
 app.use(express.static('client')); // Serves main page from client directory
+
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname,'..', 'client', 'index.html'));
+});
 
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
