@@ -51,7 +51,24 @@ function App() {
             ))}
             <button onClick={getInfo}>Refresh Info</button>
         </div>
-    );
+    // <div
+    //     data-windywidget="forecast"
+    //     data-thememode="white"
+    //     data-spotid="2651333"
+    //     data-appid="4600da2e71ece3f089e1519f1ddc7eb3">
+    // </div>
+    // <script async="true" data-cfasync="false" type="text/javascript"
+    //         src="https://windy.app/widgets-code/forecast/windy_forecast_async.js?v1.4.2"></script>
+
+    // <div
+    //     data-windywidget="map"
+    //     data-spotid="2651333"
+    //     data-appid="4600da2e71ece3f089e1519f1ddc7eb3"
+    //     data-spots="true">
+    // </div>
+    // <script async="true" data-cfasync="false" type="text/javascript" src="https://windy.app/widget3/windy_map_async.js"></script>
+)
+    ;
 
 }
 
