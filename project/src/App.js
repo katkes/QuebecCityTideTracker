@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import axios from 'axios';
 import cheerio from 'cheerio';
+import WindyWidget1 from './windyWidget1';
 
 function App() {
 
@@ -50,7 +51,9 @@ function App() {
                 <p key={index}>{item[0]}: {item[1]}</p>
             ))}
             <button onClick={getInfo}>Refresh Info</button>
+            <WindyWidget1/>
         </div>
+        
     // <div
     //     data-windywidget="forecast"
     //     data-thememode="white"

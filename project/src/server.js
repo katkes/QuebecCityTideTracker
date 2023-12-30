@@ -14,6 +14,6 @@ app.use('/api', createProxyMiddleware({
     }
 }))
 
-const PORT = process.env.PORT || 3001; // Server to be hosted on PORt 3001
+const PORT = process.env.PORT || 3001; // Server to be hosted on Port 3001
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 

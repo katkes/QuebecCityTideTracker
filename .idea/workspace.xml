@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="751943c9-5749-4587-bb28-d69af795ed5c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/project/src/windyWidget1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,6 +115,8 @@
       <workItem from="1703614512409" duration="693000" />
       <workItem from="1703653319692" duration="2822000" />
       <workItem from="1703800476090" duration="620000" />
+      <workItem from="1703892911868" duration="604000" />
+      <workItem from="1703908129805" duration="1828000" />
     </task>
     <servers />
   </component>
