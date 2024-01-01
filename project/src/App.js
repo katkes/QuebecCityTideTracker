@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import axios from 'axios';
 import cheerio from 'cheerio';
 import WindyWidget1 from './windyWidget1';
+import WindyWidget2 from './windyWidget2';
 
 function App() {
 
@@ -52,6 +53,7 @@ function App() {
             ))}
             <button onClick={getInfo}>Refresh Info</button>
             <WindyWidget1/>
+            {/*<WindyWidget2/>*/}
         </div>
         
     // <div
