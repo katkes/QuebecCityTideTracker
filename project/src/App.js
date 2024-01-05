@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from "react";
 import {tideScrape} from './tideScrape';
 import WindyWidget1 from './windyWidget1';
+import './App.css';
+
 
 function App() {
 
@@ -30,19 +32,26 @@ function App() {
 
     return (
         <div className="App">
-            <h1>Hello!</h1>
-            <div className="tide-info">
+            <h1>Tide Readings of the Quebec City Yacht Club</h1>
+            <table className="tide-info">
+                <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Tide Height (m)</th>
+                </tr>
+                </thead>
+                <tbody>
                 {arr.map((item, index) => (
-                    <div key={index} className="tide-item">
-                        <span className="time">{item[0]}</span>:
-                        <span className="height">{item[1]}</span>
-                    </div>
+                    <tr key={index}>
+                        <td>{item[0]}</td>
+                        <td>{item[1]}</td>
+                    </tr>
                 ))}
-            </div>
+                </tbody>
+            </table>
             <WindyWidget1/>
         </div>
-    )
-        ;
+    );
 
 }
 
