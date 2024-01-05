@@ -12,7 +12,20 @@ function App() {
     }
 
     useEffect(() => {
-        getInfo();
+        getInfo(); // Call immediately
+        // Function gets called every 15 minutes of the day
+        const now = new Date(); // Current time
+        const delay = 15 * 60 * 1000; // 15 minutes delay
+        const timeToNextQuarter = delay - (now.getTime() % delay);
+
+        //  Call getInfo at the next 15 min interval
+        const timeoutId = setTimeout(() => {
+            getInfo();
+            setInterval(getInfo, delay);
+        }, timeToNextQuarter);
+
+        // Clear timeout if component is unmounted
+        return () => clearTimeout(timeoutId);
     }, []);
 
     return (
@@ -26,7 +39,6 @@ function App() {
                     </div>
                 ))}
             </div>
-            <button onClick={getInfo}>Refresh Info</button>
             <WindyWidget1/>
         </div>
     )
