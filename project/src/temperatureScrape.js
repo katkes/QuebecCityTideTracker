@@ -1,15 +1,28 @@
 import axios from 'axios';
-import cheerio from 'cheerio';
 
-export const weatherScrape = async () => {
-    
+
+// Helper function to fetch weather info
+const fetchWeatherApi = async (url, params) => {
     try {
-        // Axios request to site via proxy server
-        const response = await axios.get('/api/en/stations/03250/2023-08-04?tz=EDT&unit=m');
-        const $ = cheerio.load(response.data);
-        const weather = $("#cellsTable > tbody > tr.windywidgetairTemp.id-air-temp > td:nth-child(1)").text().trim();
-        return weather;
+        const response = await axios.post(url, params);
+        return response.data;
     } catch (error) {
         console.error(error);
     }
-}
+};
+
+export const weatherScrape = async () => {
+    // params to fetch
+    const params = {
+        "latitude": 46.8123,
+        "longitude": -71.2145,
+        "current": ["temperature_2m", "wind_speed_10m", "wind_direction_10m", "wind_gusts_10m"],
+        "hourly": ["precipitation", "cloud_cover_low", "wind_speed_10m", "wind_direction_10m", "wind_gusts_10m"],
+        "timezone": "America/New_York",
+        "forecast_days": 1
+    };
+    // connecting url to proxy server
+    const url = '/api/weather';
+    const weatherData = await fetchWeatherApi(url, params);
+    return weatherData;
+};
