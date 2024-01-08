@@ -1,4 +1,3 @@
-import axios from 'axios';
 import {fetchWeatherApi} from 'openmeteo';
 
 export const weatherScrape = async () => {

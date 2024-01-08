@@ -14,16 +14,6 @@ app.use('/api', createProxyMiddleware({
     }
 }))
 
-
-// Proxy endpoint for weather
-app.use('/api/weather', createProxyMiddleware({
-    target: 'https://my-server.tld/v1/forecast',
-    changeOrigin: true,
-    pathRewrite: {
-        '^/api/weather': '',
-    }
-}));
-
 const PORT = process.env.PORT || 3001; // Server to be hosted on Port 3001
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
