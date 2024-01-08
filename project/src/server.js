@@ -17,10 +17,10 @@ app.use('/api', createProxyMiddleware({
 
 // Proxy endpoint for weather
 app.use('/api/weather', createProxyMiddleware({
-    target: 'https://my-server.tld',
+    target: 'https://my-server.tld/v1/forecast',
     changeOrigin: true,
     pathRewrite: {
-        '^/api/weather': '/v1/forecast',
+        '^/api/weather': '',
     }
 }));
 
