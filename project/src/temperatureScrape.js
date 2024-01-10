@@ -61,23 +61,20 @@ export const weatherScrape = async () => {
         // `weatherData` now contains a simple structure with arrays for datetime and weather data
         for (let i = 0; i < weatherData.minutely15.time.length; i++) {
             console.log(
-                weatherData.minutely15.time[i].toISOString(),
-                weatherData.minutely15.temperature2m[i],
-                weatherData.minutely15.precipitation[i]
+                "Time: " + weatherData.minutely15.time[i].toISOString(),
+                "Temperature 2m: " + weatherData.minutely15.temperature2m[i],
+                "Precipitation: " + weatherData.minutely15.precipitation[i]
             );
         }
         for (let i = 0; i < weatherData.hourly.time.length; i++) {
             console.log(
-                weatherData.hourly.time[i].toISOString(),
-                weatherData.hourly.windSpeed10m[i],
-                weatherData.hourly.windDirection10m[i],
-                weatherData.hourly.windGusts10m[i]
+                "Time: " + weatherData.hourly.time[i].toISOString(),
+                "Wind Speed 10m: " + weatherData.hourly.windSpeed10m[i],
+                "Wind Direction 10m: " + weatherData.hourly.windDirection10m[i],
+                "Wind Gusts 10m: " + weatherData.hourly.windGusts10m[i]
             );
         }
     } catch (error) {
         console.error(error);
     }
 };
-
-
-

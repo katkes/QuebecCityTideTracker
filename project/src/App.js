@@ -20,7 +20,6 @@ function App() {
 
     useEffect(() => {
         getInfo(); // Call immediately
-        console.log("Here")
         getWeather();
         // Function gets called every 15 minutes of the day
         const now = new Date(); // Current time
@@ -30,7 +29,7 @@ function App() {
         //  Call getInfo at the next 15 min interval
         const timeoutId = setTimeout(() => {
             getInfo();
-
+            getWeather();
             setInterval(getInfo, delay);
         }, timeToNextQuarter);
 
