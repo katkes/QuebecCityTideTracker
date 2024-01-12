@@ -60,6 +60,9 @@ export const weatherScrape = async () => {
 
         // Current time
         const currentTime = new Date();
+        let ret15 = [];
+        let retHour = [];
+        let ret = [ret15, retHour];
 
         // `weatherData` now contains a simple structure with arrays for datetime and weather data
         for (let i = 0; i < weatherData.minutely15.time.length; i++) {
@@ -69,6 +72,7 @@ export const weatherScrape = async () => {
                     "Temperature 2m: " + weatherData.minutely15.temperature2m[i],
                     "Precipitation: " + weatherData.minutely15.precipitation[i]
                 );
+                ret15.push([weatherData.minutely15.time[i].toISOString(),weatherData.minutely15.temperature2m[i],weatherData.minutely15.precipitation[i]]);
             }
         }
         for (let i = 0; i < weatherData.hourly.time.length; i++) {
@@ -79,8 +83,11 @@ export const weatherScrape = async () => {
                     "Wind Direction 10m: " + weatherData.hourly.windDirection10m[i],
                     "Wind Gusts 10m: " + weatherData.hourly.windGusts10m[i]
                 );
+                retHour.push([weatherData.hourly.time[i].toISOString(),weatherData.hourly.windDirection10m[i]],weatherData.hourly.windGusts10m[i]);
             }
         }
+
+        return ret;
     } catch (error) {
         console.error(error);
     }
