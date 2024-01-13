@@ -14,18 +14,12 @@ function App() {
         const data = await tideScrape();
         setArr(data);
     }
-    const getWeather = async (e) => {
-        const data = await weatherScrape();
-        console.log(data);
-    }
-
 
     // Updated getWeather function
     const getWeather = async () => {
         const data = await weatherScrape();
         setWeatherData(data);
     }
-
 
     useEffect(() => {
         getInfo(); // Call immediately

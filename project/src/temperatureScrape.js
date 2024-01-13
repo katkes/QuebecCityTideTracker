@@ -90,7 +90,6 @@ export const weatherScrape = async () => {
                 });
             }
         }
-
         return weatherForecast;
     } catch (error) {
         console.error(error);
