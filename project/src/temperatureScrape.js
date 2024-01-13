@@ -66,28 +66,32 @@ export const weatherScrape = async () => {
 
         // `weatherData` now contains a simple structure with arrays for datetime and weather data
         for (let i = 0; i < weatherData.minutely15.time.length; i++) {
-            if (new Date(weatherData.minutely15.time[i]) - currentTime.toISOString() >= 0){
+            if (new Date(weatherData.minutely15.time[i]) - currentTime.toISOString() >= 0) {
                 console.log(
                     "Time: " + weatherData.minutely15.time[i].toISOString(),
                     "Temperature 2m: " + weatherData.minutely15.temperature2m[i],
                     "Precipitation: " + weatherData.minutely15.precipitation[i]
                 );
-                ret15.push([weatherData.minutely15.time[i].toISOString(),weatherData.minutely15.temperature2m[i],weatherData.minutely15.precipitation[i]]);
-            }
-        }
-        for (let i = 0; i < weatherData.hourly.time.length; i++) {
-            if (new Date(weatherData.hourly.time[i]) - currentTime.toISOString() >= 0){
-                console.log(
-                    "Time: " + weatherData.hourly.time[i].toISOString(),
-                    "Wind Speed 10m: " + weatherData.hourly.windSpeed10m[i],
-                    "Wind Direction 10m: " + weatherData.hourly.windDirection10m[i],
-                    "Wind Gusts 10m: " + weatherData.hourly.windGusts10m[i]
-                );
-                retHour.push([weatherData.hourly.time[i].toISOString(),weatherData.hourly.windDirection10m[i]],weatherData.hourly.windGusts10m[i]);
+                ret15.push([weatherData.minutely15.time[i].toISOString(), weatherData.minutely15.temperature2m[i], weatherData.minutely15.precipitation[i]]);
             }
         }
 
-        return ret;
+        let weatherForecast = [];
+
+        // Filter and format data for the next 3 hours
+        for (let i = 0; i < weatherData.hourly.time.length; i++) {
+            const forecastTime = new Date(weatherData.hourly.time[i]);
+            if (forecastTime - currentTime <= 3 * 60 * 60 * 1000 && forecastTime - currentTime >= 0) {
+                weatherForecast.push({
+                    time: forecastTime.toISOString(),
+                    windSpeed10m: weatherData.hourly.windSpeed10m[i],
+                    windDirection10m: weatherData.hourly.windDirection10m[i],
+                    windGusts10m: weatherData.hourly.windGusts10m[i]
+                });
+            }
+        }
+
+        return weatherForecast;
     } catch (error) {
         console.error(error);
     }

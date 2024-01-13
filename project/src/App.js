@@ -8,6 +8,7 @@ import './App.css';
 function App() {
 
     const [arr, setArr] = useState([]);
+    const [weatherData, setWeatherData] = useState([]);
 
     const getInfo = async (e) => {
         const data = await tideScrape();
@@ -17,6 +18,14 @@ function App() {
         const data = await weatherScrape();
         console.log(data);
     }
+
+
+    // Updated getWeather function
+    const getWeather = async () => {
+        const data = await weatherScrape();
+        setWeatherData(data);
+    }
+
 
     useEffect(() => {
         getInfo(); // Call immediately
@@ -57,6 +66,27 @@ function App() {
                 </tbody>
             </table>
             <WindyWidget1/>
+            <h2>Weather Forecast for Next 3 Hours</h2>
+            <table className="weather-info">
+                <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Wind Speed (10m)</th>
+                    <th>Wind Direction (10m)</th>
+                    <th>Wind Gusts (10m)</th>
+                </tr>
+                </thead>
+                <tbody>
+                {weatherData.map((item, index) => (
+                    <tr key={index}>
+                        <td>{item.time}</td>
+                        <td>{item.windSpeed10m} km/h</td>
+                        <td>{item.windDirection10m}°</td>
+                        <td>{item.windGusts10m} km/h</td>
+                    </tr>
+                ))}
+                </tbody>
+            </table>
         </div>
     );
 
