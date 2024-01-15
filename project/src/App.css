@@ -1,31 +1,35 @@
 .App {
   text-align: center;
-  background-color: #ADD8E6; /* light blue */
-  padding: 20px;
-  font-family: Arial, sans-serif;
 }
 
-h1 {
-  color: #282c34;
+.App-header {
+  background-color: #282c34;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-.tide-info {
+.tide-info, .weather-info {
   margin: 20px auto;
   border-collapse: collapse;
-  width: 50%;
 }
 
-.tide-info th, .tide-info td {
-  border: 1px solid #000;
+.tide-info th, .weather-info th {
   padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.tide-info td, .weather-info td {
+  padding: 8px;
   text-align: left;
+  border-bottom: 1px solid #ddd;
 }
 
-.tide-info th {
-  background-color: #282c34;
-  color: #fff;
-}
-
-.tide-info td {
-  background-color: #fff;
+.tide-info tr:nth-child(even), .weather-info tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
