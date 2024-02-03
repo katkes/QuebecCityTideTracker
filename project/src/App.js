@@ -23,6 +23,7 @@ function App() {
     }
 
     useEffect(() => {
+        getInfo();
         const intervalId = setInterval(() => setCurrentTime(new Date()), 1000);
         return () => clearInterval(intervalId);
     }, []);
