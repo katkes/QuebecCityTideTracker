@@ -3,6 +3,7 @@ import {tideScrape} from './tideScrape';
 import WindyWidget1 from './windyWidget1';
 import {weatherScrape} from './temperatureScrape';
 import './App.css';
+import Compass from './Compass';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
 
     useEffect(() => {
         getInfo();
+        getWeather();
         const intervalId = setInterval(() => setCurrentTime(new Date()), 1000);
         return () => clearInterval(intervalId);
     }, []);
@@ -72,6 +74,8 @@ function App() {
                 ))}
                 </tbody>
             </table>
+            <h2>Current Wind Direction</h2>
+            <Compass direction={weatherData[0].windDirection10m} />
         </div>
     );
 
