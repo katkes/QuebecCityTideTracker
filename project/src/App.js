@@ -75,7 +75,7 @@ function App() {
                 </tbody>
             </table>
             <h2>Current Wind Direction</h2>
-            <Compass direction={weatherData[0].windDirection10m} />
+            {/*<Compass direction={weatherData[0].windDirection10m} />*/}
         </div>
     );
 

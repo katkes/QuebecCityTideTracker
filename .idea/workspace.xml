@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="751943c9-5749-4587-bb28-d69af795ed5c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/project/src/Compass.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/Compass.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/App.js" afterDir="false" />
     </list>
@@ -50,7 +48,7 @@
     "WebServerToolWindowFactoryState": "false",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/kesha/Documents/GitHub/ConUHacksVIII",
+    "last_opened_file_path": "C:/Users/kesha/Documents/GitHub/LeetCode-Solutions",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -150,7 +148,12 @@
       <workItem from="1705779854019" duration="14000" />
       <workItem from="1705813743037" duration="1258000" />
       <workItem from="1706919605526" duration="444000" />
-      <workItem from="1707061779693" duration="2256000" />
+      <workItem from="1707061779693" duration="2376000" />
+      <workItem from="1709409850932" duration="57000" />
+      <workItem from="1713735118308" duration="594000" />
+      <workItem from="1714234905089" duration="34000" />
+      <workItem from="1714934466411" duration="412000" />
+      <workItem from="1716596726285" duration="43000" />
     </task>
     <servers />
   </component>
